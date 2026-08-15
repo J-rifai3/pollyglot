@@ -1,0 +1,221 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 390px;
+    height: 100vh;    
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 9.25rem;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-image: url("assets/worldmap.png");
+    background-position: 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header > img {
+    align-self: center;
+    width: 6rem;
+    height: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header-title {
+    margin: 0;
+    padding: 0;
+    
+    color: #32CD32;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: "Big Shoulders";
+}
+
+#header-subtitle {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-weight: 600;
+    font-size: 0.75rem;
+    font-family: "Poppins";
+}
+
+main {
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+main > div {
+    border: 4px solid black;
+    border-radius: 15px;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#translate-text-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.45em;
+    padding: 0;
+    margin: 0;
+}
+
+#translate-text-header {
+    margin: 0;
+    padding: 0;
+
+    color: #035A9D;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.25rem;
+    align-self: center;
+}
+
+#translate-text {
+    margin: 0;
+    padding: 0.25em 0.5em;
+    resize: none;
+    background-color: #EFF0F4;
+    border: none;
+    border-radius: 8px;
+    width: 18rem;
+    height: 7rem;
+
+    color: #333333;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0.25em 0.5em;
+}
+
+#translate-text::placeholder {
+    color: #333333;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+
+#language-select-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+#language-select-header {
+    margin: 0;
+    padding: 0;
+    
+    color: #035A9D;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+#language-select-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-self: flex-start;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1.25em;
+}
+
+#language-select-radio > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+    height: 1.6em;
+}
+
+#language-select-radio > div > label {
+    color: #333333;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: "Poppins";
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+#language-select-radio > div > label > p {
+    padding: 0;
+    margin: 0;
+}
+
+#language-select-radio > div > label > img {
+    border: 1px solid #999999;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+    width: 1.25em;
+    height: 1.25em;
+    accent-color: #008BF7;
+    border: 0.15em solid #FFF;
+
+}
+
+
+#translate-button {
+    background-color: #035A9D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 13em;
+    height: 2em;
+
+    font-family: "Poppins";
+    font-size: 1.5em;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#translate-button:hover, #translate-button:active  {
+    background-color: #237bbe;
+}

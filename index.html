@@ -2,20 +2,65 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <header>
-            <img />
-            <h1>
-                PollyGlot
-            </h1>
-            <p>
-                Perfect Translation Every Time
-            </p>
+            <img src="/assets/parrot.png"/>
+            <div>
+                <h1 id="header-title">
+                    PollyGlot
+                </h1>
+                <p id="header-subtitle">
+                    Perfect Translation Every Time
+                </p>
+            </div>
         </header>
 
         <main>
-
+            <div>
+                <div id="translate-text-div">
+                    <p id="translate-text-header">
+                        Text to translate 👇
+                    </p>
+                    <textarea id="translate-text" placeholder="How are you?"></textarea>
+                </div>
+                <div id="language-select-div">
+                    <p id="language-select-header">
+                        Select language 👇
+                    </p>
+                    <div id="language-select-radio">
+                        <div>
+                            <input type="radio" id="french" name="language-select-option" value="french" checked>
+                            <label for="french">
+                                <p>French</p>
+                                <img for="french" src="assets/fr-flag.png"/>
+                            </label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" id="spanish" name="language-select-option" value="spanish">
+                            <label for="spanish">
+                                 <p>Spanish</p>
+                                <img for="spanish" src="assets/sp-flag.png"/>
+                            </label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" id="japanese" name="language-select-option" value="japanese">
+                            <label for="japanese">
+                                 <p>Japanese</p>
+                                <img for="japanese" src="assets/jpn-flag.png"/>
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <button id="translate-button">Translate</button>
+                </div>
+            </div>
         </main>
         
         <script src="index.js" type="module"></script>
