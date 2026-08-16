@@ -13,6 +13,10 @@ const htmlDiv = document.querySelector('html');
 
 
 translateButton.addEventListener("click", async () => {
+    if (!textArea.value) {
+        textArea.removeAttribute('placeholder');
+    }
+
     if (translateButton.textContent == "Start Over") {
         resetTranslator();
     } else {
@@ -70,8 +74,10 @@ function resetTranslator() {
     translateButton.textContent = "Translate";
     textArea.readOnly = false;
     textArea.value = '';
+    textArea.setAttribute('placeholder', "How are you?");
     radioDiv.classList.remove('hidden');
     outputDiv.classList.add('hidden');
+    textArea
 }
 
 //this stuff below handles copying to clipboard
