@@ -8,6 +8,8 @@ const loadingDiv = document.getElementById('loading-div');
 const radioDiv = document.getElementById('language-select-radio');
 const outputDiv = document.getElementById('output-translation-div');
 const outputTextArea = document.getElementById('output-textbox');
+const tag = document.querySelector('.cursor-tag');
+const htmlDiv = document.querySelector('html');
 
 
 translateButton.addEventListener("click", async () => {
@@ -28,7 +30,7 @@ translateButton.addEventListener("click", async () => {
             })
 
             const { text } = await response.json();
-            outputTextArea.textContent = text;
+            outputTextArea.value = text;
 
             endLoading();
         } catch (error) {
@@ -70,4 +72,38 @@ function resetTranslator() {
     textArea.value = '';
     radioDiv.classList.remove('hidden');
     outputDiv.classList.add('hidden');
+}
+
+//this stuff below handles copying to clipboard
+let tagTimeout;
+outputTextArea.addEventListener('click', () => {
+    copyTextToClipboard(outputTextArea.value);
+    clearTimeout(tagTimeout); 
+    tag.style.display = 'block';
+
+    tagTimeout = setTimeout(() => {
+        tag.style.display = 'none';
+    }, 2000);
+})
+
+outputTextArea.addEventListener('mouseenter', (e) => {
+    if (tag.style.display === 'none' || tag.style.display === '') { 
+        tag.style.left = `${e.clientX}px`;
+        tag.style.top = `${e.clientY}px`;
+    }
+})
+
+htmlDiv.addEventListener('mousemove', (e) => {
+  if (tag.style.display === 'block') {
+    tag.style.left = `${e.clientX + 15}px`;
+    tag.style.top = `${e.clientY + 15}px`;
+  }
+});
+
+
+function copyTextToClipboard(text) {
+    navigator.clipboard.writeText(text)
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
 }

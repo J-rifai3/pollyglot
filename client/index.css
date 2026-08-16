@@ -262,4 +262,22 @@ input[type="radio"] {
     font-weight: 600;
     font-size: 1.25rem;
     padding: 0.25em 0.5em;
+    cursor: pointer;
+}
+
+#output-textbox:active {
+    background-color: #e6e8ef;
+}
+
+
+.cursor-tag {
+  position: fixed;
+  display: none; /* hidden by default */
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none; /* lets clicks pass through */
+  z-index: 1000;
 }
